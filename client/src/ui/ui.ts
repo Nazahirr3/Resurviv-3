@@ -131,6 +131,18 @@ if ($("#honor-button").length === 0) {
             Honor
         </button>
     `);
+    this.spectateOptionsWrapper.append(`
+    <div id="limit-text"
+        style="
+            color: red;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 5px;
+        ">
+        3 Left Today
+    </div>
+`);
+
 }
 
     rightCenter = $("#ui-right-center");
