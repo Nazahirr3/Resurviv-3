@@ -111,6 +111,28 @@ export class UiManager {
     spectateModeStats = $("#ui-spectate-stats");
     spectateModeStatsData = $("#ui-spectate-stats-data");
     spectateOptionsWrapper = $("#ui-spectate-options-wrapper");
+    // Add Honor button if not already added
+if ($("#honor-button").length === 0) {
+    this.spectateOptionsWrapper.append(`
+        <button id="honor-button" 
+                style="
+                    background: green;
+                    color: white;
+                    border: none;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    position: absolute;
+                    bottom: -40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    cursor: pointer;
+                ">
+            Honor
+        </button>
+    `);
+}
+
     rightCenter = $("#ui-right-center");
     leaderboardAlive = $("#ui-leaderboard-alive");
     playersAlive = $(".js-ui-players-alive");
